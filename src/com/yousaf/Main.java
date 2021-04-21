@@ -4,6 +4,7 @@ import com.yousaf.inheritance.LabEngineer;
 import com.yousaf.inheritance.Lecturer;
 import com.yousaf.inheritance.Professor;
 import com.yousaf.inheritance.Teacher;
+import com.yousaf.Generics.*;
 import java.util.Scanner;
 import java.util.*;
 
@@ -11,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-
+        System.out.println("*************Task1*************");
         ArrayList<Teacher> list = new ArrayList<Teacher>();
         LabEngineer[] objects_lab_engineer = new LabEngineer[10];
         Lecturer[] objects_lecturer = new Lecturer[10];
@@ -26,8 +27,24 @@ public class Main {
             list.add(objects_lecturer[i]);
             list.add(objects_professor[i]);
         }
+
         Collections.shuffle(list);//Shuffling the list
         print_teachers(list);
+        System.out.println("*************Task2*************");
+        KeyValuePair<Integer,String> obje = new KeyValuePair<Integer,String>();
+        obje.add_element(45,"Mahmood Yousaf");
+        obje.add_element(42,"Abdullah");
+        obje.add_element(46,"Qazi Arsalan");
+        String check = obje.getElement(46);
+        System.out.println(check);
+        String check2 = obje.getElement(42);
+        System.out.println(check2);
+        String check3 = obje.getElement(45);
+        System.out.println(check3);
+        obje.remove_element(46);
+        //After deletion checking is it removed or not
+        String check4 = obje.getElement(46);
+        System.out.println(check4);
         /*Scanner input = new Scanner(System.in);
         String name = input.nextLine();
         System.out.println(name);*/
